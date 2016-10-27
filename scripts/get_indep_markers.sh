@@ -21,7 +21,7 @@ plink --vcf ${vcf_name} --vcf-min-gp 0.8 --make-bed --out $geno_name
 
 #Get list of markers that are in LD
 #See http://pngu.mgh.harvard.edu/~purcell/plink/summary.shtml#prune for interpration of parameters
-plink --bfile $geno_name --indep 100 5 1.05 --out $prune_name
+plink --bfile $geno_name --indep 200 5 1.05 --out $prune_name
 
 #Cleanup
 mv ${prune_name}.prune.in ../data/input
